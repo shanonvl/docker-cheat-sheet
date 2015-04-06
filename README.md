@@ -284,7 +284,7 @@ You can also use remote NFS volumes if you're [feeling brave](http://www.tech-d.
 
 You may also consider running data-only containers as described [here](http://container42.com/2013/12/16/persistent-volumes-with-docker-container-as-volume-pattern/) to provide some data portability.
 
-Ycan easily see the list of available volumes running on a container using the [inspect](https://docs.docker.com/reference/commandline/cli/#inspect) function.  
+You can easily see the list of available volumes running on a container using the [inspect](https://docs.docker.com/reference/commandline/cli/#inspect) function.  
 
 `docker inspect --format '{{.Volumes}}' <container-name>`
 
