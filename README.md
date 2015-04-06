@@ -284,12 +284,9 @@ You can also use remote NFS volumes if you're [feeling brave](http://www.tech-d.
 
 You may also consider running data-only containers as described [here](http://container42.com/2013/12/16/persistent-volumes-with-docker-container-as-volume-pattern/) to provide some data portability.
 
-If you have [jshon](http://kmkeen.com/jshon/) available (`brew install jshon` on mac), you can easily see the list of available volumes running on a container using the [inspect](https://docs.docker.com/reference/commandline/cli/#inspect) function.  
+Ycan easily see the list of available volumes running on a container using the [inspect](https://docs.docker.com/reference/commandline/cli/#inspect) function.  
 
-`docker inspect <container-name> | jshon -e 0 -e Config -e Volumes -k`
-
-Even without `jshon`, you can still run `docker inspect <container-name>`, and look in the `$[0].Config.Volumes` path of the response.
-
+`docker inspect --format '{{.Volumes}}' <container-name>`
 
 ## Exposing ports
 
